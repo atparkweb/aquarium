@@ -29,14 +29,11 @@ public class SpriteSheet {
 
     // TODO Make a dictionary of all types to images
     public static String getSpriteKey(AnimalType type, boolean isAlive) {
-        switch(type) {
-            case FISH:
-                return isAlive ? "fishTile_080.png" : "fishTile_098.png";
-            case PIRANHA:
-                return isAlive ? "fishTile_072.png" : "fishTile_090.png";
-            default:
-                return "";
-        }
+        return switch (type) {
+            case FISH -> isAlive ? "fishTile_080.png" : "fishTile_098.png";
+            case PIRANHA -> isAlive ? "fishTile_072.png" : "fishTile_090.png";
+            default -> "";
+        };
     }
 
     public BufferedImage getSpriteImage(AnimalType type, boolean isAlive) {
