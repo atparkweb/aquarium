@@ -13,6 +13,7 @@ class SpatialPartition {
     double partitionSize;
 
     Map<Point, ArrayList<Drawable>> partitions;
+ 
     SpatialPartition (int numPartitions, ArrayList<Animal> objects, int width, int height) {
         this.numPartitions = numPartitions;
         partitionSize = (double)Math.min(width, height) / numPartitions;
