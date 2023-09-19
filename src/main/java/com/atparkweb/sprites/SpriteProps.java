@@ -1,11 +1,11 @@
 package com.atparkweb.sprites;
 
-public class SpriteProps {
+class SpriteProps {
     int x; int y;
-    public int width;
-    public int height;
+    int width;
+    int height;
 
-    public SpriteProps(int x, int y, int width, int height) {
+    SpriteProps(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;

@@ -12,7 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
 
-public class SpriteDataStore {
+class SpriteDataStore {
     private static SpriteDataStore instance = null;
     private final HashMap<String, SpriteProps> data;
 
@@ -55,7 +55,7 @@ public class SpriteDataStore {
         }
     }
 
-    public static SpriteDataStore getInstance() {
+    static SpriteDataStore getInstance() {
         if (instance == null) {
             try {
                 instance = new SpriteDataStore();
@@ -68,7 +68,7 @@ public class SpriteDataStore {
         return instance;
     }
 
-    public SpriteProps getSpriteData(String key) {
+    SpriteProps getSpriteData(String key) {
         return data.get(key);
     }
 }
