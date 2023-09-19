@@ -24,7 +24,7 @@ public class Renderer extends JPanel {
 
     public Renderer(long durationInSeconds, int width, int height) {
         this.spriteSheet = new SpriteSheet("/fishSpritesheet.png");
-        this.animalList = SpawningPool.getAnimals(50, 50);
+        this.animalList = SpawningPool.getAnimals(5, 1);
         this.width = width;
         this.height = height;
 
