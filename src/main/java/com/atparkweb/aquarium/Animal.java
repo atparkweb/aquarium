@@ -2,14 +2,18 @@ package com.atparkweb.aquarium;
 
 import com.atparkweb.animation.Drawable;
 
-public class Animal extends Drawable {
+public class Animal implements Drawable {
+    private int x;
+    private int y;
     private int vx;
     private int vy;
     private boolean isAlive = true;
     private final AnimalType type;
 
     public Animal(int x, int y, int vx, int vy, AnimalType type) {
-        super(x, y);
+        this.x = x;
+        this.y = y;
+
         this.type = type;
 
         this.vx = vx;
@@ -46,4 +50,10 @@ public class Animal extends Drawable {
     }
     public AnimalType getType() { return type; }
     public boolean getIsAlive() { return isAlive; }
+    
+    @Override
+    public int getX() { return x; }
+    
+    @Override
+    public int getY() { return y; }
 }
