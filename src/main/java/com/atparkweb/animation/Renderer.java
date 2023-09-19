@@ -34,7 +34,7 @@ public class Renderer extends JPanel {
 
         Duration duration = Duration.ofSeconds(durationInSeconds);
 
-        clock.setCallback(clock -> {
+        clock.setCallback(c -> {
             if (startedAt == null) {
                 startedAt = Instant.now();
             }
