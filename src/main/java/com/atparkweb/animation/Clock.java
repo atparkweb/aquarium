@@ -2,8 +2,8 @@ package com.atparkweb.animation;
 
 import javax.swing.Timer;
 
-public class Clock {
-    public interface Callback {
+class Clock {
+    interface Callback {
         void tick(Clock clock);
     }
 
@@ -11,11 +11,11 @@ public class Clock {
 
     private Callback callback;
 
-    public void setCallback(Callback tick) {
+    void setCallback(Callback tick) {
         this.callback = tick;
     }
 
-    public void start() {
+    void start() {
         if (timer == null) {
             timer = new Timer(5, e -> {
                 if (callback != null) {
@@ -27,7 +27,7 @@ public class Clock {
         }
     }
 
-    public void stop() {
+    void stop() {
         if (timer != null) {
             timer.stop();
             timer = null;
